@@ -18,7 +18,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
         alt="Exterior photo of {{housingLocation?.name}}"/>
       <section class="listing-description">
         <h2 class="listing-heading">{{housingLocation?.name}}</h2>
-        <p class="listing-location">Type: {{housingLocation?.toppings}}</p>
+        <p class="listing-location">Type: {{housingLocation?.dessertType}}</p>
         <p class="listing-location">Toppings: {{housingLocation?.toppings}}</p>
       </section>
       <section class="listing-features">
@@ -38,7 +38,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
           <label for="email">Email</label>
           <input id="email" type="email" formControlName="email">
-          <button type="submit" class="primary">Apply now</button>
+          <button type="submit" class="primary">Submit</button>
         </form>
       </section>
     </article>
