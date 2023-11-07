@@ -1,10 +1,10 @@
 .results {
     display: grid;
-    column-gap: 14px;
-    row-gap: 14px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-    margin-top: 50px;
-    justify-content: space-around;
+    column-gap: 36px;
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 340px));
+    margin-top: 30px;
+    justify-content: center;
   }
   
   input[type="text"] {
@@ -13,7 +13,7 @@
     border-radius: 8px;
     margin-right: 4px;
     display: inline-block;
-    width: 30%;
+    width: 40%;
   }
   
   button {

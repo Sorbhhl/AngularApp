@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
     <main>
       <a [routerLink]="['/']">
         <header class="brand-name">
-          <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+          <img class="brand-logo" src="https://cdn.pixabay.com/photo/2016/03/31/08/12/cupcake-1292229_1280.jpg" alt="logo" aria-hidden="true">
         </header>
       </a>
       <section class="content">

@@ -1,0 +1,17 @@
+.brand-logo{
+    width:180px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .brand-logo{
+        float:none;
+        text-align: center;
+    } 
+  }
+  
+  @media (max-width: 499px) {
+    .brand-logo{
+        float:none;
+        text-align: center;
+    }    
+  }

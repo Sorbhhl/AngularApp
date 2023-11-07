@@ -5,108 +5,63 @@ import { HousingLocation } from './housinglocation';
   providedIn: 'root'
 })
 export class HousingService {
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   protected housingLocationList: HousingLocation[] = [
     {
       id: 0,
-      name: 'Acme Fresh Start Housing',
-      city: 'Chicago',
-      state: 'IL',
-      photo: `${this.baseUrl}/bernard-hermant-CLKGGwIBTaY-unsplash.jpg`,
-      availableUnits: 4,
-      wifi: true,
-      laundry: true
+      name: 'Creamy Strawberry Delight Crepe',
+      dessertType: 'Crepe',
+      toppings: 'Cream - Strawberries',
+      photo: `https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 23,
     },
     {
       id: 1,
-      name: 'A113 Transitional Housing',
-      city: 'Santa Monica',
-      state: 'CA',
-      photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg`,
-      availableUnits: 0,
-      wifi: false,
-      laundry: true
+      name: 'Chocolate Dream Crepe with Vanilla Ice Cream',
+      dessertType: 'Crepe',
+      toppings: 'Cream - Chocolate syrup - Vanilla Ice Cream',
+      photo: `https://images.unsplash.com/photo-1649873034148-7f06e5dafbd1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 14,
     },
     {
       id: 2,
-      name: 'Warm Beds Housing Support',
-      city: 'Juneau',
-      state: 'AK',
-      photo: `${this.baseUrl}/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg`,
-      availableUnits: 1,
-      wifi: false,
-      laundry: false
+      name: 'Carrot Cake Heaven with Cream Cheese Frosting',
+      dessertType: 'Cake',
+      toppings: 'Icing - Nuts',
+      photo: `https://images.unsplash.com/photo-1607269832078-1a3bd22a306d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 17,
     },
     {
       id: 3,
-      name: 'Homesteady Housing',
-      city: 'Chicago',
-      state: 'IL',
-      photo: `${this.baseUrl}/ian-macdonald-W8z6aiwfi1E-unsplash.jpg`,
-      availableUnits: 1,
-      wifi: true,
-      laundry: false
+      name: 'Chocolate-Kissed Red Velvet Cake',
+      dessertType: 'Cake',
+      toppings: 'Icing - Cocoa',
+      photo: `https://images.unsplash.com/photo-1586788680434-30d324b2d46f?q=80&w=1902&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 24,
     },
     {
       id: 4,
-      name: 'Happy Homes Group',
-      city: 'Gary',
-      state: 'IN',
-      photo: `${this.baseUrl}/krzysztof-hepner-978RAXoXnH4-unsplash.jpg`,
-      availableUnits: 1,
-      wifi: true,
-      laundry: false
+      name: 'Blueberry Bliss Cheesecake',
+      dessertType: 'Cake',
+      toppings: 'Jam - Blueberries',
+      photo: `https://images.unsplash.com/photo-1567171466295-4afa63d45416?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 20,
     },
     {
       id: 5,
-      name: 'Hopeful Apartment Group',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/r-architecture-JvQ0Q5IkeMM-unsplash.jpg`,
-      availableUnits: 2,
-      wifi: true,
-      laundry: true
+      name: 'Glazed Lemon Burst Cookies',
+      dessertType: 'Cookie',
+      toppings: 'Sugar glass',
+      photo: `https://images.unsplash.com/photo-1641557309674-771c5ec8dee5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 12,
     },
     {
       id: 6,
-      name: 'Seriously Safe Towns',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/phil-hearing-IYfp2Ixe9nM-unsplash.jpg`,
-      availableUnits: 5,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 7,
-      name: 'Hopeful Housing Solutions',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/r-architecture-GGupkreKwxA-unsplash.jpg`,
-      availableUnits: 2,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 8,
-      name: 'Seriously Safe Towns',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/saru-robert-9rP3mxf8qWI-unsplash.jpg`,
-      availableUnits: 10,
-      wifi: false,
-      laundry: false
-    },
-    {
-      id: 9,
-      name: 'Capital Safe Towns',
-      city: 'Portland',
-      state: 'OR',
-      photo: `${this.baseUrl}/webaliser-_TPTXZd9mOo-unsplash.jpg`,
-      availableUnits: 6,
-      wifi: true,
-      laundry: true
+      name: 'Gourmet Chocolate Chip Treats',
+      dessertType: 'Cookie',
+      toppings: 'Sprinkled lemon',
+      photo: `https://images.unsplash.com/photo-1557310717-d6bea9f36682?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
+      availableUnits: 18,
     }
   ];
 
